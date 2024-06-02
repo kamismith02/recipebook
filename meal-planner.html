@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <main class="meal-planner">
+        <h1>Meal Planner</h1>
+        <!-- Meal Planner Section -->
+        <div class="days-container">
+            <div class="day">
+                <h2>Monday</h2>
+                <div class="dropzone" data-day="Monday"></div>
+            </div>
+            <div class="day">
+                <h2>Tuesday</h2>
+                <div class="dropzone" data-day="Tuesday"></div>
+            </div>
+            <div class="day">
+                <h2>Wednesday</h2>
+                <div class="dropzone" data-day="Wednesday"></div>
+            </div>
+            <div class="day">
+                <h2>Thursday</h2>
+                <div class="dropzone" data-day="Thursday"></div>
+            </div>
+            <div class="day">
+                <h2>Friday</h2>
+                <div class="dropzone" data-day="Friday"></div>
+            </div>
+            <div class="day">
+                <h2>Saturday</h2>
+                <div class="dropzone" data-day="Saturday"></div>
+            </div>
+            <div class="day">
+                <h2>Sunday</h2>
+                <div class="dropzone" data-day="Sunday"></div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <input type="text" id="search-input" placeholder="Search for a meal">
+            <button id="search-button">Search</button>
+            <select id="category-select">
+                <option value="">All Categories</option>
+            </select>
+        </section>
+
+        <!-- Results Section -->
+        <div id="results"></div>
+    </main>
+    <div id="footer-container"></div>
+    <script src="../js/partials.js"></script>
+    <script src="../js/mealplanner.js"></script>
+</body>
+
+</html>

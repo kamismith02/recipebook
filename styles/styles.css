@@ -57,7 +57,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    max-width: 600px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -142,15 +142,27 @@ button:hover {
 #results {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     justify-items: center;
     margin-bottom: 20px;
     text-align: center;
 }
 
-#results div {
-    margin-bottom: 20px;
+#results .meal-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    width: 250px;
+}
+
+#results .meal-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 /* meal planner */
@@ -244,43 +256,81 @@ button:hover {
     }
 }
 
-
-/* Styles for reviews */
-.review {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-#review-form {
+#filters {
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-#review-form label {
-    display: block;
-    margin-bottom: 5px;
+#filters select,
+#filters input,
+#filters button {
+    padding: 5px;
+    font-size: 13px;
 }
 
-#review-form input,
-#review-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#results,
+#favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-#review-form button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #28a745;
-    color: white;
-    border-radius: 4px;
+.meal-box,
+.favorite-meal {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    padding: 10px;
+    text-align: center;
 }
 
-#review-form button:hover {
+.meal-box img,
+.favorite-meal img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling for the meal details page */
+.meal-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.meal-page-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.meal-page-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
     background-color: #218838;
+}
+
+#favorites {
+    text-align: center;
 }

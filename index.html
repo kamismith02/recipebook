@@ -1,34 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>The Flavor Factory</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-
 <body>
     <div id="header-container"></div>
     <main>
         <h1>Recipe Search</h1>
-        <div id="filters">
-            <input type="text" id="search-input" placeholder="Search by name...">
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for meals...">
             <button id="search-button">Search</button>
+            <button id="clear-button">Clear</button>
+        </div>
+        <div id="filters-container">
             <select id="category-select">
-                <option value="">Filter by category...</option>
+                <option value="">Select Category</option>
             </select>
             <select id="ingredient-select">
-                <option value="">Filter by ingredient...</option>
+                <option value="">Select Ingredient</option>
             </select>
             <select id="area-select">
-                <option value="">Filter by area...</option>
+                <option value="">Select Area</option>
             </select>
         </div>
+        <div id="favorites">
+            <h2>Favorites</h2>
+            <div id="favorites-list"></div>
+        </div>
+        <h2>Results</h2>
         <div id="results"></div>
     </main>
     <div id="footer-container"></div>
     <script src="js/partials.js"></script>
     <script src="js/app.js"></script>
 </body>
-
-</html>

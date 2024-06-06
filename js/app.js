@@ -128,12 +128,12 @@ function displayMealPage(mealId) {
       mealPageDiv.classList.add('meal-page');
       mealPageDiv.innerHTML = `
         <div class="meal-page-content">
-          <button class="back-button">Back</button>
           <h2>${meal.strMeal}</h2>
           <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
           <p><strong>Category:</strong> ${meal.strCategory}</p>
           <p><strong>Area:</strong> ${meal.strArea}</p>
           <p><strong>Instructions:</strong> ${meal.strInstructions}</p>
+          <button class="back-button">Back</button>
         </div>
       `;
       
